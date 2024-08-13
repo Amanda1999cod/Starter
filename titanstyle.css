@@ -1,1 +1,83 @@
-{}
+@font-face {
+    font-family: cartoonSlam; 
+    src: url(CartoonSlam.ttf);}
+
+body { 
+    font-weight: 600;
+    padding: 0;
+    margin: 0;}
+
+.hero-banner{color: whitesmoke;
+            background-color: rgb(156, 7, 156);
+            min-height: 100vh;
+            padding: 50px, 20px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;}
+
+.wrapper{font-family: cartoonSlam;
+        width: 960px;
+        margin: 0 auto;
+        padding-top: 40px;}
+
+h4{font-size: 20px;
+   margin: 0;}
+
+h1{font-size: 50px;
+   margin: 14px 0 20px;}
+
+.hero-banner h3{font-size: 30px;
+    margin: 0 0 35px;
+   }
+
+a.cta, button.cta{
+            font-size: 30px;
+            font-weight: bold;
+            color: whitesmoke;
+            display: inline-block;
+            background-color: rgb(156, 7, 156);
+            box-shadow: 0 0 0 10px rgba(156, 7, 156, .15);
+            border-radius: 10px;
+            padding: 20px 30px;
+            text-decoration: none;}
+
+a.cta.alt, button.cta.alt{
+    background-color: #ffd400;
+    color: black;
+    box-shadow: (0 0 0 10px #ffd400);}
+
+#img1{position: absolute; bottom: 35%; right: 15%;}
+#img2 {position: absolute; top: 20%; right: 20%;}
+#img3 {position: absolute; top: 20%; right: 10%;}
+#img4 {position: absolute; bottom:20%; right:23%;}
+#img5 {position: absolute; bottom: 20%; right:8%;}
+
+nav {
+    height: 100px;
+    background-color: white;
+    box-shadow: 0 5px 8px rgba(0,0,0,.2);
+    position: sticky;
+}
+
+nav.logo {display: block;
+          margin-top: -20px;
+          margin-left: 30px;
+}
+
+nav ul li {margin-top: -20px;
+           padding: 0;
+           display: block;
+           float: right;
+}
+
+nav ul li a {
+             display: block;
+             height: 100%;
+             box-sizing: border-box;
+             font-size: 30px;
+             text-transform: uppercase;
+             font-weight: bold;
+             text-decoration: none;
+             color: black;
+             padding: 10px;
+}
