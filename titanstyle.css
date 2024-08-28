@@ -14,7 +14,9 @@ body { font-family: cartoonSlam;
             padding: 50px, 20px;
             box-sizing: border-box;
             position: relative;
-            overflow: hidden;}
+            overflow: hidden;
+            line-height: 50px;
+        }
 
 .wrapper {
         width: 960px;
@@ -38,7 +40,7 @@ p {
 
 .hero-banner h3 {font-size: 30px;
     margin: 0 0 35px;
-   }
+}
 
 a.cta, button.cta {
             font-size: 30px;
@@ -49,7 +51,15 @@ a.cta, button.cta {
             box-shadow: 0 0 0 10px rgba(156, 7, 156, .15);
             border-radius: 10px;
             padding: 20px 30px;
-            text-decoration: none;}
+            text-decoration: none;
+            outline: none;
+            border: none;
+            cursor: pointer;
+}
+
+a.cta:active, button.cta:active {
+    opacity: .7;
+}
 
 a.cta.alt, button.cta.alt {
     background-color: #ffd400;
@@ -67,6 +77,8 @@ nav {
     background-color: white;
     box-shadow: 0 5px 8px rgba(0,0,0,.2);
     position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 nav .logo {display: block;
@@ -100,18 +112,182 @@ nav ul li a {
              color: black;
              padding: 35px 10px;
              line-height: 30px;
+             
 }
+
+nav ul li a:hover {color: rgb(19, 163, 230);}
 
 .more-info {
     text-align: center;
     line-height: 50px;
 }
 
-/*.more-info p {
-}*/
+.more-info p {
+        margin: 18px 0 35px;
+}
 
 .highlight {
     background-color: pink;
     color: rgb(255, 18, 97);
 }
 
+.sep {
+    margin: 70px auto;
+    width: 470px;
+    height: 7px;
+    background-color: black;
+}
+
+.story h3 {font-size: 40px;}
+
+
+.nb-list {
+    width: 470px;
+    padding: 20px 20px 0px 20px;
+    box-sizing: border-box;
+    background-color: antiquewhite;
+    float: left;
+    margin: 0px 20px 20px 0px;
+    position: relative;
+}
+
+.nb-list li {
+    height: 70px;
+    border-radius: 10px;
+    font-size: 30px;
+    color: white;
+    display: block;
+    margin-bottom: 20px;
+    padding: 6px 20px;
+}
+
+.nb-list li.red {background-color: #ff3300;}
+.nb-list li.blue {background-color: rgb(17, 17, 102);}
+.nb-list li.gray {background-color: rgb(170, 162, 162);}
+.nb-list li.yellow {background-color: yellow; color: #111111;}
+.nb-list li.peach {background-color: salmon;}
+.nb-list li.pink {background-color: pink;}
+.nb-list li.dragging {
+    background-color: yellow; 
+    color: #111111;
+    position: absolute;
+    top: 100px;
+    left: 60px;
+    right: -30px;
+    transform: rotate(6deg);
+    box-shadow: 0 2px 14px rgba(0,0,0,.3);
+}
+
+.nb-list li.dragging::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 54px;
+    height: 50px;
+    background: url('hand.png') no-repeat 0 0;
+    background-size: 70%;
+    bottom: -50%;
+    left: 60%;
+}
+
+.gang {
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    text-align: center;
+    color: rgba(0,0,0,.4);
+    font-size: 20px;
+    margin: 80px 0 45px;
+}
+
+.popup {/*display: none;*/
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+}
+
+.popup .blanket {
+    background-color: rgba (0 0 0 .7);
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.popup .content {
+    width: 960px;
+    height:500px;
+    padding: 30px 40px;
+    box-sizing: border-box;
+    background-color:white;
+    text-align:center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -480px;
+    margin-top: -250px;
+}
+
+.popup h2 {
+    margin: 10px 0 20px;
+}
+
+.popup .cta {
+    margin-top: 40px;
+}
+
+
+.popup .close {
+    width: 80px;
+    height: 80px;
+    background: url(close.png) no-repeat center center;
+    background-size: 70%;
+    position: absolute;
+    top:-40px;
+    right: -40px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    text-indent: -999px;
+    cursor: pointer;
+}
+
+.popup .row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.popup .item {
+    float: left;
+    width: 400px;
+    margin-left: 40px;
+    text-align: left;
+}
+
+.popup .item :first-child {
+    margin-left: 0;
+}
+
+.popup .item label {
+    display:block;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.popup .item input {
+    display:block;
+    font-size: 30px;
+    border: 4px solid #111111;
+    height: 70px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 20px;
+}
